@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third Class</title>
+  </head>
+  <style>
+    body {
+      background: #adadad;
+    }
+    .title {
+      color: #b0b;
+    }
+
+    .paragrafo {
+      color: brown;
+    } 
+
+    .div-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      width: 50%;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <main class="div-main">
+      <h1 class="title">Olá Mundo !!!</h1>
+      <p class="paragrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet harum
+        sapiente nulla fuga aperiam qui sit illo recusandae labore error! Fugit
+        libero quisquam autem placeat quaerat, voluptas perspiciatis temporibus
+        sequi!
+      </p>
+    </main>
+
+    <script>
+      //let n1 = window.prompt("digite um numero");
+      //let n2 = window.prompt("digite outro numero");
+      let n1 = Number.parseInt(window.prompt("digite um numero"));
+      let n2 = Number.parseInt(window.prompt("digite outro numero"));
+
+      let soma = n1 + n2; // Concatenação
+      // (number + number ) == adição
+      // (string + string ) == concatenação
+      window.alert(`a soma é ${soma}`);
+    </script>
+  </body>
+</html>
