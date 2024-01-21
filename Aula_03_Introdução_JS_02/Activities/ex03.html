@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        font: nomrmal 20pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual é o seu nome?");
+      document.write(
+        `Seu nome tem <strong>${nome.length}</strong> letras. <br>`
+      );
+      document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`);
+      document.write(`Seu nome em minusculo é ${nome.toLowerCase()} <br>`);
+      n1 = 20.5;
+      document.write(`Você tem ${n1} reais na carteira <br>`);
+      document.write(
+        `Versão fixed '2': Você tem ${n1.toFixed(2)} reais na carteira <br>`
+      );
+      document.write(
+        `Utilizaremos o .replace para trocar algo por outra coisa, que nesse caso, trocamos o '.' por ',': Você tem ${n1
+          .toFixed(2)
+          .replace(".", ",")} reais na carteira <br>`
+      );
+      document.write(
+        `Utilizaremos o .toLocaleString para localizar a string em pt-br, ou seja, vamos deixar no estilo daquele pais: Você tem ${n1.toLocaleString(
+          "pt-BR",
+          { style: "currency", currency: "BRL" }
+        )}
+          reais na carteira <br>`
+      );
+    </script>
+  </body>
+</html>
