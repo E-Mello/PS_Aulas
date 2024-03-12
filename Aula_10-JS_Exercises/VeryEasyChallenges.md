@@ -276,7 +276,7 @@
 
 ## 17. Pontos de basquete
 
-    Você está contando pontos para um jogo de basquete, dada a quantidade de 2 pontos marcados e 3 pontos marcados, encontre os pontos finais do time e retorne esse valor.
+    Você está contando pontos para um jogo de basquete, em que a contagem dos pontos é realacionada de duas forma respectivamente. A primeira seria a quantidade de pontos que valem 2 pontos e a segunda seria a quantidade de pontos que valem 3 pontos, encontre os pontos finais do time e retorne esse valor.
 
     Exemplos:
 
@@ -324,7 +324,7 @@
     vacas = 4 patas
     porcos = 4 patas
 
-    O agricultor contou os seus animais e dá-lhe um subtotal para cada  espécie. Você tem que implementar uma função que retorne o número total  de patas de todos os animais.
+    O agricultor contou os seus animais e dá-lhe um subtotal para cada  espécie. Você tem que implementar uma função que retorne o número total  de patas de todos os respectivos animais.
 
     Exemplos:
 
