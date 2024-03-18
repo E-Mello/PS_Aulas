@@ -370,8 +370,10 @@
     Suponha que o seguinte array de objetos de bebida precise ser classificado:
 
     bebidas = [
-        {nome: "limonada", preço: 50},
-        {nome: "limão", preço: 10}
+        {name: "lime", price: 50},
+        {name: "lemonade", price: 10},
+        {name: "orange", price: 30},
+        {name: "watermelon", price: 80},
     ]
 
     A saída do objeto de bebidas classificadas será:
@@ -388,7 +390,7 @@
 
     tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]) ➞ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-    tuckIn([15,150], [45, 75, 35]) ➞ [15, 45, 75, 35, 150]
+    tuckIn([15,150], [45, 75, 35]) ➞ [15, 35, 45, 75, 150]
 
     tuckIn([[1, 2], [5, 6]], [[3, 4]]) ➞ [[1, 2], [3, 4], [5, 6]]
 

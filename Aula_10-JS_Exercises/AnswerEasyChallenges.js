@@ -59,11 +59,19 @@
 // shiftToLeft(46, 6);
 
 // ## 5. Recursão: deslocamento para a esquerda por potências de dois
-// TODO: Make After
-// function shiftToLeft(num01, num02) {
-//   let exp = num02 - 1;
+// function shiftToLeftRecursive(num01, num02) {
+//   if (num02 === 0) {
+//     return num01;
+//   } else {
+//     return shiftToLeftRecursive(num01 * 2, num02 - 1);
+//   }
 // }
-// shiftToLeft(5, 2);
+// console.log(shiftToLeftRecursive(5, 2));
+// console.log(shiftToLeftRecursive(10, 3));
+// console.log(shiftToLeftRecursive(-32, 2));
+// console.log(shiftToLeftRecursive(-6, 5));
+// console.log(shiftToLeftRecursive(12, 4));
+// console.log(shiftToLeftRecursive(46, 6));
 
 // ## 6. Encontre os menores e maiores números
 
@@ -128,9 +136,8 @@
 // );
 
 // ## 9. Converter um número em Base 2
-// TODO: Make After
 // function binary(arg) {
-
+//   return arg.toString(2);
 // }
 
 // console.log(binary(1));
@@ -246,3 +253,103 @@
 // console.log(toBinary(0xff));
 // console.log(toBinary(0xaa));
 // console.log(toBinary(0xfa));
+
+// ## 17. Mais velho que eu
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   compareAge(arg) {
+//     if (this.age > arg.age) {
+//       return `"${arg.name} is younger than me"`;
+//     } else if (this.age < arg.age) {
+//       return `"${arg.name} is older than me"`;
+//     } else {
+//       return `"${arg.name} is the same age as me"`;
+//     }
+//   }
+// }
+
+// let p1 = new Person("Samuel", 24);
+// let p2 = new Person("Joel", 36);
+// let p3 = new Person("Lily", 24);
+
+// console.log(p1.compareAge(p2));
+// console.log(p2.compareAge(p1));
+// console.log(p1.compareAge(p3));
+
+// ## 18. Classificação de bebidas
+
+/* 
+A função passada para o método sort define como os elementos do array serão comparados. Ela recebe dois elementos (a e b) como parâmetros e retorna um valor que indica qual elemento deve ter precedência na ordenação:
+
+Se a for menor que b: A função retorna um valor negativo.
+Se a for maior que b: A função retorna um valor positivo.
+Se a for igual a b: A função retorna 0.
+*/
+
+/**
+ Se a diferença for negativa, significa que o preço de a é menor que o de b. Nesse caso, a deve ter precedência na ordenação e será colocado antes de b.
+Se a diferença for positiva, significa que o preço de a é maior que o de b. Nesse caso, b deve ter precedência e será colocado antes de a.
+Se a diferença for 0, significa que os preços de a e b são iguais. Nesse caso, a ordem não importa.
+ */
+
+/*
+O método sort utiliza a função de comparação para comparar cada par de elementos do array. Ele itera pelo array e troca a posição dos elementos de acordo com o valor retornado pela função de comparação.
+*/
+
+/**
+ Considerando os elementos a e b:
+
+Se a.price for 20 e b.price for 30, a função retornará -10. Como é negativo, a terá precedência e será colocado antes de b.
+Se a.price for 40 e b.price for 30, a função retornará 10. Como é positivo, b terá precedência e será colocado antes de a.
+ */
+
+/**
+ Após a ordenação, o array drinks estará ordenado com os elementos do mais barato para o mais caro.
+ */
+// drinks = [
+//   { name: "lime", price: 50 },
+//   { name: "lemonade", price: 10 },
+//   { name: "orange", price: 30 },
+//   { name: "watermelon", price: 80 },
+// ];
+
+// function sortDrinkByPrice(args) {
+//   const organize = args.sort(function (a, b) {
+//     return parseFloat(a.price) - parseFloat(b.price);
+//   });
+//   return organize;
+// }
+
+// console.log(sortDrinkByPrice(drinks));
+
+// ## 19. Coloque na matriz
+
+// function tuckIn(arg01, arg02) {
+//   let arr03 = arg01.concat(arg02.filter((item) => arg01.indexOf(item) < 0));
+//   const organizeArr = arr03.sort(function (a, b) {
+//     if (Object.prototype.toString.call(a && b) != "[object Array]") {
+//       return a - b;
+//     } else {
+//       return a[0] - b[0];
+//     }
+//   });
+//   //   const organizeArr = arr03.sort();
+//   return organizeArr;
+// }
+
+// console.log(tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
+// console.log(tuckIn([15, 150], [45, 75, 35]));
+// console.log(
+//   tuckIn(
+//     [
+//       [1, 2],
+//       [5, 6],
+//     ],
+//     [[3, 4]]
+//   )
+// );
