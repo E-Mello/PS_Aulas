@@ -184,9 +184,9 @@
 
 ## 9. Converter um número em Base 2
 
-    Create a function that returns a base-2 (binary) representation of a base-10 (decimal) string number. To convert is simple: ((2) means base-2 and (10) means base-10) 010101001(2) = 1 + 8 + 32 + 128.
+    Crie uma função que retorne uma representação de base 2 (binária) de um número de string de base 10 (decimal). Converter é simples: ((2) significa base 2 e (10) significa base 10) 010101001(2) = 1 + 8 + 32 + 128.
 
-    Going from right to left, the value of the most right bit is 1, now from that every bit to the left will be x2 the value, value of an 8 bit binary numbers are (256, 128, 64, 32, 16, 8, 4, 2, 1).
+    Indo da direita para a esquerda, o valor do bit mais à direita é 1, agora a partir disso cada bit à esquerda será x2 o valor, o valor de um número binário de 8 bits é (256, 128, 64, 32, 16, 8 , 4, 2, 1).
 
     Exemplos:
 
@@ -228,37 +228,11 @@
 
     Observe a desigualdade estrita
 
-## 11. RegEx I: Encontre o tempo
+## 11. Promises III: Promessa Nativa, Apresentando o Executor
 
-    A hora tem um formato: horas:minutos. Tanto as horas quanto os minutos têm dois dígitos, como 09:00.
+    Promessas são apenas objetos que contêm o resultado de operações assíncronas. Então, quando você usa um? Quando você deseja controlar o resultado de uma operação assíncrona. Tudo o que você precisa fazer é agrupar a função assíncrona com um construtor de promessa.
 
-    Faça uma regexp para encontrar o horário na string: Café da manhã às 09:00 no quarto 123:456. Nesta tarefa ainda não há necessidade de verificar a exatidão da hora, portanto 25:99 também pode ser um resultado válido. O regexp não deve corresponder a 123:456.
-
-## 12. RegEx XIV: intervalos de grupo x|y
-
-    grupos e intervalos indicam grupos e intervalos de caracteres de expressão. A expressão regular x|y corresponde a "x" ou "y".
-
-    const REGEXP = /azul|vermelho/
-
-    "bandeira vermelha".match(REGEXP) // vermelho
-    "bandeira azul".match(REGEXP) // azul
-
-    // Corresponde a "azul" em "bandeira azul" e "vermelho" em "bandeira vermelha".
-    Crie uma expressão regular para corresponder a todas as bandeiras vermelhas e azuis em uma string. Você deve usar | na sua expressão. As bandeiras podem vir em qualquer ordem.
-
-    Exemplos:
-
-    "red flag blue flag".match(REGEXP) ➞ ["red flag", "blue flag"]
-
-    "yellow flag red flag blue flag green flag".match(REGEXP) ➞ ["red flag", "blue flag"]
-
-    "pink flag red flag black flag blue flag green flag red flag ".match(REGEXP) ➞ ["red flag", "blue flag", "red flag"]
-
-## 13. Promises III: Promessa Nativa, Apresentando o Executor
-
-    Promises are just objects that contain the outcome of asynchronous operations. So when do you use one? When you want to control the outcome of an asynchronous operation. All you have to do is wrap the asynchronous function with a promise constructor.
-
-    The promise constructor requires you to pass a function called the executor which takes two parameters, resolve and reject. Both are functions that you use to pass or reject a value that is usually the result of the async operation. Here's an example of a simple promise:
+    O construtor da promessa requer que você passe uma função chamada executor que recebe dois parâmetros, resolver e rejeitar. Ambas são funções que você usa para passar ou rejeitar um valor que geralmente é o resultado da operação assíncrona. Aqui está um exemplo de uma promessa simples:
 
     let promise = new Promise( (resolve, reject) => {
       setTimeout(( ) => {
@@ -266,11 +240,11 @@
       }, 1000)
     })
 
-    setTimeout is a browser API that is very commonly used in tutorials to represent async operations. After 1000ms has passed, we call the callback function in setTimeout() and pass a string "edabit" to the resolve function.
+    setTimeout é uma API de navegador muito comumente usada em tutoriais para representar operações assíncronas. Após 1000ms, chamamos a função de retorno de chamada em setTimeout() e passamos uma string "edabit" para a função de resolução.
 
-    Create a simple promise and pass the resolve function a string value of your choice. Use the setTimeout function as your asynchronous operation. Your setTimeout() function should not exceed 1000ms. Store the promise inside a variable named promise.
+    Crie uma promessa simples e passe para a função de resolução um valor de string de sua escolha. Use a função setTimeout como sua operação assíncrona. Sua função setTimeout() não deve exceder 1000ms. Armazene a promessa dentro de uma variável chamada promessa.
 
-## 14. Número de quadrados em uma grade N \* N
+## 12. Número de quadrados em uma grade N \* N
 
     Crie uma função que calcule o número de quadrados diferentes em uma grade quadrada n * n.
 
@@ -296,7 +270,7 @@
     A entrada é um número inteiro positivo.
     Número piramidal quadrado.
 
-## 15. Soma da Resistência em Circuitos em Série
+## 13. Soma da Resistência em Circuitos em Série
 
     Quando os resistores são conectados em série, a mesma corrente passa por cada resistor da cadeia e a resistência total, RT, do circuito deve ser igual à soma de todos os resistores individuais somados. Aquilo é:
 
@@ -318,7 +292,7 @@
     Observe o ohm singular para valores <= 1.
     Este desafio foi inspirado no desafio Python Soma de Resistência em Circuitos Paralelos de Joshua Señoron.
 
-## 16. Maior troca
+## 14. Maior troca
 
     Escreva uma função que receba um número de dois dígitos e determine se é a maior das duas trocas de dígitos possíveis.
 
@@ -341,7 +315,7 @@
 
     Números com dois dígitos idênticos (terceiro exemplo) devem resultar em verdadeiros
 
-## 17. O que está escondido entre a multidão?
+## 15. O que está escondido entre a multidão?
 
     Uma palavra está à solta e agora tentou se esconder entre uma multidão de letras altas! Ajude a escrever uma função para detectar qual é a palavra, conhecendo as seguintes regras:
 
@@ -357,7 +331,7 @@
 
     detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment") ➞ "embezzlement"
 
-## 18. Hexadecimal para Binário
+## 16. Hexadecimal para Binário
 
     Crie uma função que receberá um número HEX e retornará o equivalente binário (como uma string).
 
@@ -373,7 +347,7 @@
 
     O número será sempre um número de 8 bits.
 
-## 19. Mais velho que eu
+## 17. Mais velho que eu
 
     Crie um método na classe Person que retorne a comparação da idade de outra pessoa. Dadas as instâncias p1, p2 e p3, que serão inicializadas com os atributos nome e idade, retorne uma frase no seguinte formato:
 
@@ -389,7 +363,7 @@
     p2.compareAge(p1) ➞ "Samuel is younger than me."
     p1.compareAge(p3) ➞ "Lily is the same age as me."
 
-## 20. Classificação de bebidas
+## 18. Classificação de bebidas
 
     Você receberá uma variedade de bebidas, sendo cada bebida um objeto com duas propriedades: nome e preço. Crie uma função que tenha o array drinks como argumento e retorne os objetos drinks ordenados por preço em ordem crescente.
 
@@ -406,7 +380,7 @@
 
     sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
 
-## 21. Coloque na matriz
+## 19. Coloque na matriz
 
     Crie uma função que receba dois arrays e insira o segundo array no meio do primeiro array.
 
