@@ -186,7 +186,8 @@
 
     Crie uma função que retorne uma representação de base 2 (binária) de um número de string de base 10 (decimal). Converter é simples: ((2) significa base 2 e (10) significa base 10) 010101001(2) = 1 + 8 + 32 + 128.
 
-     Indo da direita para a esquerda, o valor do bit mais à direita é 1, agora a partir disso cada bit à esquerda será x2 o valor, o valor de um número binário de 8 bits é (256, 128, 64, 32, 16, 8 , 4, 2, 1).
+    Indo da direita para a esquerda, o valor do bit mais à direita é 1, agora a partir disso cada bit à esquerda será x2 o valor, o valor de um número binário de 8 bits é (256, 128, 64, 32, 16, 8 , 4, 2, 1).
+
 
     Exemplos:
 
