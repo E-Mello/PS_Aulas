@@ -188,6 +188,7 @@
 
     Indo da direita para a esquerda, o valor do bit mais à direita é 1, agora a partir disso cada bit à esquerda será x2 o valor, o valor de um número binário de 8 bits é (256, 128, 64, 32, 16, 8 , 4, 2, 1).
 
+
     Exemplos:
 
     binary(1) ➞ "1"
@@ -261,9 +262,9 @@
     Se n = 0 então o número de quadrados é 0
     Se n = 1 então o número de quadrados é 1 + 0 = 1
     Se n = 2, então o número de quadrados é 2 ^ 2 + 1 = 4 + 1 = 5
-    Se n = 3, então o número de quadrados é 3 ^ 2 + 5 = 9 + 5 = 14
+    Se n = 3, então o número de quadrados é 3 ^ 3 + 5 = 9 + 5 = 14
 
-    As you can see, for each value of n the number of squares is n squared + the number of squares from the previous value of n.
+    Como você pode ver, para cada valor de n o número de quadrados é n ao quadrado + o número de quadrados do valor anterior de n.
 
     Lembrete:
 
@@ -370,8 +371,10 @@
     Suponha que o seguinte array de objetos de bebida precise ser classificado:
 
     bebidas = [
-        {nome: "limonada", preço: 50},
-        {nome: "limão", preço: 10}
+        {name: "lime", price: 50},
+        {name: "lemonade", price: 10},
+        {name: "orange", price: 30},
+        {name: "watermelon", price: 80},
     ]
 
     A saída do objeto de bebidas classificadas será:
