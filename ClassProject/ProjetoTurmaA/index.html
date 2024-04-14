@@ -10,7 +10,7 @@
     <main id="main">
       <div id="container">
         <h1 id="title">Tela de login</h1>
-        <div id="loginBox">
+        <form onsubmit="login(event)" id="loginBox">
           <div>
             <label for="username">Username: </label>
             <input
@@ -32,9 +32,9 @@
             />
           </div>
           <button id="btnSubmit" type="submit" onclick="login()">Login</button>
-        </div>
+        </form>
       </div>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="/js/login.js"></script>
   </body>
 </html>
